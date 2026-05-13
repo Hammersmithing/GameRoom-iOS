@@ -15,15 +15,13 @@ struct ChessView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 8 * cellSize + 12, height: 8 * cellSize + 12) {
                 board
-                Spacer()
-                if game.result != nil {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

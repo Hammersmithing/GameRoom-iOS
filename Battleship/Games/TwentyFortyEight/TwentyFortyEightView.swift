@@ -17,15 +17,14 @@ struct TwentyFortyEightView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 4 * tileSize + 3 * gap + 2 * gap,
+                      height: 4 * tileSize + 3 * gap + 2 * gap) {
                 board
-                Spacer()
-                if banner {
-                    bannerView.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if banner {
+                bannerView.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

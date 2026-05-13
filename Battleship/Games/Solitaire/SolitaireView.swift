@@ -18,16 +18,17 @@ struct SolitaireView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 18) {
-                topRow
-                tableauRow
-                if game.hasWon {
-                    resultBanner
+            ScaledFit(width: 7 * cardWidth + 6 * 10 + 24,
+                      height: cardHeight + 18 + cardHeight + 20 * tableauOverlap) {
+                VStack(spacing: 18) {
+                    topRow
+                    tableauRow
                 }
-                Spacer(minLength: 0)
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.hasWon {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

@@ -6,6 +6,12 @@ struct YahtzeeView: View {
 
     private let dieSize: CGFloat = 64
 
+    private var naturalWidth: CGFloat { 544 }
+    private var naturalHeight: CGFloat {
+        let rows: CGFloat = 13 * 28
+        return dieSize + 56 + rows + 116
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             GameHeader(
@@ -15,18 +21,17 @@ struct YahtzeeView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 18) {
-                Spacer(minLength: 8)
-                diceRow
-                rollButton
-                scoreSheet
-                if game.isComplete {
-                    resultBanner
+            ScaledFit(width: naturalWidth, height: naturalHeight) {
+                VStack(spacing: 18) {
+                    diceRow
+                    rollButton
+                    scoreSheet
                 }
-                Spacer(minLength: 8)
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.isComplete {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

@@ -21,15 +21,13 @@ struct DotsAndBoxesView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: boardSide + 40, height: boardSide + 40) {
                 board
-                Spacer()
-                if game.result != nil {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

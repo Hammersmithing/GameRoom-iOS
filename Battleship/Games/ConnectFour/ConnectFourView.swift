@@ -18,63 +18,47 @@ struct ConnectFourView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
-
-                // Drop preview row
-                HStack(spacing: spacing) {
-                    ForEach(0..<ConnectFourGame.cols, id: \.self) { col in
-                        ZStack {
-                            Circle()
-                                .fill(Color.clear)
-                                .frame(width: cellSize, height: cellSize)
-
-                            if hoverCol == col && game.result == nil && game.lowestEmptyRow(in: col) != nil {
-                                Circle()
-                                    .fill(discColor(game.currentTurn).opacity(0.4))
-                                    .frame(width: cellSize * 0.75, height: cellSize * 0.75)
-                            }
-                        }
-                    }
-                }
-                .padding(.horizontal, 12)
-
-                // Board
+            ScaledFit(width: 7 * cellSize + 6 * spacing + 24,
+                      height: cellSize + spacing + 6 * cellSize + 5 * spacing + 24) {
                 VStack(spacing: spacing) {
-                    ForEach(0..<ConnectFourGame.rows, id: \.self) { row in
-                        HStack(spacing: spacing) {
-                            ForEach(0..<ConnectFourGame.cols, id: \.self) { col in
-                                cellView(row: row, col: col)
+                    // Drop preview row
+                    HStack(spacing: spacing) {
+                        ForEach(0..<ConnectFourGame.cols, id: \.self) { col in
+                            ZStack {
+                                Circle()
+                                    .fill(Color.clear)
+                                    .frame(width: cellSize, height: cellSize)
+
+                                if hoverCol == col && game.result == nil && game.lowestEmptyRow(in: col) != nil {
+                                    Circle()
+                                        .fill(discColor(game.currentTurn).opacity(0.4))
+                                        .frame(width: cellSize * 0.75, height: cellSize * 0.75)
+                                }
                             }
                         }
                     }
-                }
-                .padding(12)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(red: 0.1, green: 0.15, blue: 0.45, opacity: 1.0))
-                )
-                .onContinuousHover { phase in
-                    switch phase {
-                    case .active(let loc):
-                        let colWidth = cellSize + spacing
-                        let col = Int((loc.x - 12) / colWidth)
-                        hoverCol = (col >= 0 && col < ConnectFourGame.cols) ? col : nil
-                    case .ended:
-                        hoverCol = nil
-                    @unknown default:
-                        break
+
+                    // Board
+                    VStack(spacing: spacing) {
+                        ForEach(0..<ConnectFourGame.rows, id: \.self) { row in
+                            HStack(spacing: spacing) {
+                                ForEach(0..<ConnectFourGame.cols, id: \.self) { col in
+                                    cellView(row: row, col: col)
+                                }
+                            }
+                        }
                     }
-                }
-
-                Spacer()
-
-                if game.result != nil {
-                    resultBanner
-                        .padding(.bottom, 30)
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color(red: 0.1, green: 0.15, blue: 0.45, opacity: 1.0))
+                    )
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 30)
+            }
         }
         .background(
             LinearGradient(

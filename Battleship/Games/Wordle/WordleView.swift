@@ -9,6 +9,13 @@ struct WordleView: View {
     private let cellSize: CGFloat = 56
     private let cellSpacing: CGFloat = 6
 
+    private var naturalWidth: CGFloat { 544 }
+    private var naturalHeight: CGFloat {
+        let grid = 6 * cellSize + 5 * cellSpacing
+        let keyboard: CGFloat = 3 * 48 + 2 * 6
+        return grid + 24 + keyboard + 16
+    }
+
     private static let keyboardRows: [[Character]] = [
         Array("QWERTYUIOP"),
         Array("ASDFGHJKL"),
@@ -24,18 +31,16 @@ struct WordleView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 24) {
-                Spacer(minLength: 8)
-                guessGrid
-                Spacer(minLength: 8)
-                keyboardView
-                if game.result != nil {
-                    resultBanner
+            ScaledFit(width: naturalWidth, height: naturalHeight) {
+                VStack(spacing: 24) {
+                    guessGrid
+                    keyboardView
                 }
-                Spacer(minLength: 8)
             }
-            .padding(.horizontal, 24)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

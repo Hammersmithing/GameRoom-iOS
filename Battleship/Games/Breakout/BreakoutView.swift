@@ -23,15 +23,13 @@ struct BreakoutView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: BreakoutGame.courtWidth, height: BreakoutGame.courtHeight) {
                 ZStack {
                     court
                     overlay
                 }
-                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
         }
         .background(Color.black)
         .focusable()

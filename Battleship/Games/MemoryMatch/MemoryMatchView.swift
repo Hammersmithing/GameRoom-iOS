@@ -28,15 +28,14 @@ struct MemoryMatchView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 4 * cardWidth + 3 * spacing + 32,
+                      height: 4 * cardHeight + 3 * spacing + 32) {
                 board
-                Spacer()
-                if game.isComplete {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.isComplete {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

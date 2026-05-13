@@ -15,15 +15,13 @@ struct CheckersView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 8 * cellSize + 16, height: 8 * cellSize + 16) {
                 board
-                Spacer()
-                if game.result != nil {
-                    resultBanner.padding(.bottom, 30)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 30)
+            }
         }
         .background(
             LinearGradient(

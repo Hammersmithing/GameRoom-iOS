@@ -16,15 +16,13 @@ struct PongView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: PongGame.courtWidth, height: PongGame.courtHeight) {
                 court
-                Spacer()
-                if game.winner != nil {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.winner != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(Color.black)
         .focusable()

@@ -8,6 +8,9 @@ struct MancalaView: View {
     private let storeWidth: CGFloat = 80
     private let storeHeight: CGFloat = 184
 
+    private var naturalWidth: CGFloat { 2 * storeWidth + 2 * 16 + 6 * pitSize + 5 * 14 + 40 }
+    private var naturalHeight: CGFloat { storeHeight + 40 + 2 * (16 + 18) }
+
     var body: some View {
         VStack(spacing: 0) {
             GameHeader(
@@ -17,22 +20,21 @@ struct MancalaView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 16) {
-                Spacer()
-                Text("P2 — top")
-                    .font(.system(size: 12, weight: .heavy, design: .monospaced))
-                    .foregroundColor(playerColor(2).opacity(game.currentTurn == 2 ? 1 : 0.5))
-                board
-                Text("P1 — bottom")
-                    .font(.system(size: 12, weight: .heavy, design: .monospaced))
-                    .foregroundColor(playerColor(1).opacity(game.currentTurn == 1 ? 1 : 0.5))
-                if game.result != nil {
-                    resultBanner.padding(.top, 8)
+            ScaledFit(width: naturalWidth, height: naturalHeight) {
+                VStack(spacing: 16) {
+                    Text("P2 — top")
+                        .font(.system(size: 12, weight: .heavy, design: .monospaced))
+                        .foregroundColor(playerColor(2).opacity(game.currentTurn == 2 ? 1 : 0.5))
+                    board
+                    Text("P1 — bottom")
+                        .font(.system(size: 12, weight: .heavy, design: .monospaced))
+                        .foregroundColor(playerColor(1).opacity(game.currentTurn == 1 ? 1 : 0.5))
                 }
-                Spacer()
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

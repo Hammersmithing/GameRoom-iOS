@@ -17,12 +17,14 @@ struct TetrisView: View {
                 onExit: onExit
             )
 
-            HStack(alignment: .top, spacing: 24) {
-                playfield
-                sidebar
+            ScaledFit(width: 10 * cellSize + 9 + 8 + 24 + 140 + 40,
+                      height: 20 * cellSize + 19 + 8 + 40) {
+                HStack(alignment: .top, spacing: 24) {
+                    playfield
+                    sidebar
+                }
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
         }
         .background(
             LinearGradient(

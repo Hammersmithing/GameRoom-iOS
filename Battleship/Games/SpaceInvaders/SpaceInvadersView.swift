@@ -16,12 +16,10 @@ struct SpaceInvadersView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: SpaceInvadersGame.courtWidth, height: SpaceInvadersGame.courtHeight) {
                 content
-                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
         }
         .background(Color.black)
         .focusable()

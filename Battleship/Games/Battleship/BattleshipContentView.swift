@@ -21,15 +21,17 @@ struct BattleshipView: View {
             Group {
                 switch game.phase {
                 case .placingShips(let player):
-                    PlacementView(game: game, player: player)
-                        .padding(20)
+                    ScaledFit(width: 460, height: 540) {
+                        PlacementView(game: game, player: player)
+                    }
 
                 case .transition:
                     TransitionView(game: game)
 
                 case .firing(let player):
-                    FiringView(game: game, player: player)
-                        .padding(20)
+                    ScaledFit(width: 780, height: 470) {
+                        FiringView(game: game, player: player)
+                    }
 
                 case .shotResult(let player, _, let wasHit, let sunkShip):
                     ShotResultView(game: game, player: player, wasHit: wasHit, sunkShip: sunkShip)

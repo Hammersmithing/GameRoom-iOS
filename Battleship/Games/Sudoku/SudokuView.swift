@@ -16,17 +16,16 @@ struct SudokuView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 18) {
-                Spacer(minLength: 8)
-                board
-                numberPad
-                if game.isComplete {
-                    resultBanner
+            ScaledFit(width: 470, height: 9 * cellSize + 18 + 46 + 8 + 36) {
+                VStack(spacing: 18) {
+                    board
+                    numberPad
                 }
-                Spacer(minLength: 8)
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.isComplete {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

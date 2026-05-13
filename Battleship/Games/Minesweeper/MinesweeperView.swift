@@ -15,15 +15,13 @@ struct MinesweeperView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 16 * cellSize + 15 + 12, height: 16 * cellSize + 15 + 12) {
                 board
-                Spacer()
-                if game.result != nil {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

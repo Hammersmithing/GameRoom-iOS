@@ -8,6 +8,14 @@ struct HangmanView: View {
 
     private static let alphabet: [Character] = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
+    private var naturalWidth: CGFloat { 360 }
+    private var naturalHeight: CGFloat {
+        let canvas: CGFloat = 260
+        let word: CGFloat = 60
+        let grid: CGFloat = 4 * 38 + 3 * 6
+        return canvas + word + grid + 72
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             GameHeader(
@@ -17,18 +25,17 @@ struct HangmanView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 24) {
-                Spacer()
-                hangmanCanvas
-                wordView
-                letterGrid
-                Spacer()
-                if game.result != nil {
-                    resultBanner.padding(.bottom, 24)
+            ScaledFit(width: naturalWidth, height: naturalHeight) {
+                VStack(spacing: 24) {
+                    hangmanCanvas
+                    wordView
+                    letterGrid
                 }
             }
-            .padding(.horizontal, 24)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

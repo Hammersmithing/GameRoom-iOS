@@ -16,12 +16,10 @@ struct AsteroidsView: View {
                 onExit: onExit
             )
 
-            VStack {
-                Spacer()
+            ScaledFit(width: AsteroidsGame.courtWidth, height: AsteroidsGame.courtHeight) {
                 content
-                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
         }
         .background(Color.black)
         .focusable()

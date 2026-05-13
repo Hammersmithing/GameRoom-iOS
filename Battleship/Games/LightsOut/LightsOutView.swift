@@ -16,15 +16,14 @@ struct LightsOutView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 5 * cellSize + 4 * spacing + 2 * spacing,
+                      height: 5 * cellSize + 4 * spacing + 2 * spacing) {
                 board
-                if game.isSolved {
-                    resultBanner.padding(.top, 24)
-                }
-                Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.isSolved {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

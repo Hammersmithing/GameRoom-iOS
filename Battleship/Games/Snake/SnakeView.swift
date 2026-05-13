@@ -17,8 +17,7 @@ struct SnakeView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 20 * cellSize + 12, height: 20 * cellSize + 12) {
                 ZStack {
                     board
                     if game.isPaused && !game.isGameOver {
@@ -30,12 +29,11 @@ struct SnakeView: View {
                             .cornerRadius(8)
                     }
                 }
-                Spacer()
-                if game.isGameOver {
-                    resultBanner.padding(.bottom, 24)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.isGameOver {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(

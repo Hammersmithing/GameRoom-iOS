@@ -16,18 +16,13 @@ struct TicTacToeView: View {
                 onExit: onExit
             )
 
-            // Board
-            VStack(spacing: 0) {
-                Spacer()
+            ScaledFit(width: 3 * cellSize + 2 * spacing + 40, height: 3 * cellSize + 2 * spacing + 40) {
                 boardView
-                Spacer()
-
-                if game.result != nil {
-                    resultBanner
-                        .padding(.bottom, 30)
-                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 30)
+            }
         }
         .background(
             LinearGradient(

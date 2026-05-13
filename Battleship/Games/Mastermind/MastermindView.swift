@@ -7,6 +7,11 @@ struct MastermindView: View {
     private let pegSize: CGFloat = 32
     private let feedbackSize: CGFloat = 10
 
+    private var naturalWidth: CGFloat { 360 }
+    private var naturalHeight: CGFloat {
+        pegSize + 16 + 16 + CGFloat(MastermindGame.maxGuesses) * (pegSize + 6) + pegSize + 16 + 60 + 16
+    }
+
     private static let palette: [Color] = [
         Color(red: 0.95, green: 0.25, blue: 0.30),
         Color(red: 0.95, green: 0.55, blue: 0.20),
@@ -25,20 +30,19 @@ struct MastermindView: View {
                 onExit: onExit
             )
 
-            VStack(spacing: 16) {
-                Spacer(minLength: 4)
-                hiddenCodeRow
-                Divider().background(Color(white: 0.3))
-                guessHistory
-                activeRow
-                colorPicker
-                if game.result != nil {
-                    resultBanner
+            ScaledFit(width: naturalWidth, height: naturalHeight) {
+                VStack(spacing: 16) {
+                    hiddenCodeRow
+                    Divider().background(Color(white: 0.3))
+                    guessHistory
+                    activeRow
+                    colorPicker
                 }
-                Spacer(minLength: 4)
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxHeight: .infinity)
+            if game.result != nil {
+                resultBanner.padding(.bottom, 24)
+            }
         }
         .background(
             LinearGradient(
