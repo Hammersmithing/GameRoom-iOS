@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000001 /* BattleshipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000001; };
+		A10000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000002; };
+		A10000003 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000003; };
+		A10000004 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000004; };
+		A10000005 /* BattleshipGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000005; };
+		A10000006 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000006; };
+		A10000007 /* PlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000007; };
+		A10000008 /* FiringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000008; };
+		A10000009 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000009; };
+		A1000000A /* BattleshipContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000A; };
+		A1000000B /* GameDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000B; };
+		A1000000C /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000C; };
+		A1000000D /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000D; };
+		A1000000E /* ConnectFourGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000E; };
+		A1000000F /* ConnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000F; };
+		A10000010 /* GameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010; };
+		A10000011 /* CheckersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000011; };
+		A10000012 /* CheckersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000012; };
+		A10000013 /* ReversiGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000013; };
+		A10000014 /* ReversiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000014; };
+		A10000015 /* MinesweeperGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000015; };
+		A10000016 /* MinesweeperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000016; };
+		A10000017 /* SnakeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000017; };
+		A10000018 /* SnakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000018; };
+		A10000019 /* MemoryMatchGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000019; };
+		A1000001A /* MemoryMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001A; };
+		A1000001B /* DotsAndBoxesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001B; };
+		A1000001C /* DotsAndBoxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001C; };
+		A1000001D /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001D; };
+		A1000001E /* HangmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001E; };
+		A1000001F /* ChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001F; };
+		A10000020 /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020; };
+		A10000021 /* PongGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000021; };
+		A10000022 /* PongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000022; };
+		A10000023 /* TwentyFortyEightGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000023; };
+		A10000024 /* TwentyFortyEightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000024; };
+		A10000025 /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000025; };
+		A10000026 /* TetrisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000026; };
+		A10000027 /* WordleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000027; };
+		A10000028 /* WordleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000028; };
+		A10000029 /* SpaceInvadersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000029; };
+		A1000002A /* SpaceInvadersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002A; };
+		A1000002B /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002B; };
+		A1000002C /* AsteroidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002C; };
+		A1000002D /* SudokuGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002D; };
+		A1000002E /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002E; };
+		A1000002F /* SolitaireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002F; };
+		A10000030 /* SolitaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000030; };
+		A10000031 /* MastermindGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000031; };
+		A10000032 /* MastermindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000032; };
+		A10000033 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000033; };
+		A10000034 /* BreakoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000034; };
+		A10000035 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000035; };
+		A10000036 /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000036; };
+		A10000037 /* YahtzeeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000037; };
+		A10000038 /* YahtzeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000038; };
+		A10000039 /* MancalaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000039; };
+		A1000003A /* MancalaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003A; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000001 /* BattleshipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipApp.swift; sourceTree = "<group>"; };
+		A20000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000003 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		A20000004 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		A20000005 /* BattleshipGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipGame.swift; sourceTree = "<group>"; };
+		A20000006 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		A20000007 /* PlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementView.swift; sourceTree = "<group>"; };
+		A20000008 /* FiringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiringView.swift; sourceTree = "<group>"; };
+		A20000009 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		A200000A /* BattleshipContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleshipContentView.swift; sourceTree = "<group>"; };
+		A200000B /* GameDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDefinition.swift; sourceTree = "<group>"; };
+		A200000C /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
+		A200000D /* TicTacToeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
+		A200000E /* ConnectFourGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourGame.swift; sourceTree = "<group>"; };
+		A200000F /* ConnectFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourView.swift; sourceTree = "<group>"; };
+		A2000010 /* GameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeader.swift; sourceTree = "<group>"; };
+		A20000011 /* CheckersGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckersGame.swift; sourceTree = "<group>"; };
+		A20000012 /* CheckersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckersView.swift; sourceTree = "<group>"; };
+		A20000013 /* ReversiGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiGame.swift; sourceTree = "<group>"; };
+		A20000014 /* ReversiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiView.swift; sourceTree = "<group>"; };
+		A20000015 /* MinesweeperGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperGame.swift; sourceTree = "<group>"; };
+		A20000016 /* MinesweeperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperView.swift; sourceTree = "<group>"; };
+		A20000017 /* SnakeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeGame.swift; sourceTree = "<group>"; };
+		A20000018 /* SnakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeView.swift; sourceTree = "<group>"; };
+		A20000019 /* MemoryMatchGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchGame.swift; sourceTree = "<group>"; };
+		A2000001A /* MemoryMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchView.swift; sourceTree = "<group>"; };
+		A2000001B /* DotsAndBoxesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAndBoxesGame.swift; sourceTree = "<group>"; };
+		A2000001C /* DotsAndBoxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsAndBoxesView.swift; sourceTree = "<group>"; };
+		A2000001D /* HangmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
+		A2000001E /* HangmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanView.swift; sourceTree = "<group>"; };
+		A2000001F /* ChessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGame.swift; sourceTree = "<group>"; };
+		A20000020 /* ChessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
+		A20000021 /* PongGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongGame.swift; sourceTree = "<group>"; };
+		A20000022 /* PongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongView.swift; sourceTree = "<group>"; };
+		A20000023 /* TwentyFortyEightGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFortyEightGame.swift; sourceTree = "<group>"; };
+		A20000024 /* TwentyFortyEightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFortyEightView.swift; sourceTree = "<group>"; };
+		A20000025 /* TetrisGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisGame.swift; sourceTree = "<group>"; };
+		A20000026 /* TetrisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisView.swift; sourceTree = "<group>"; };
+		A20000027 /* WordleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleGame.swift; sourceTree = "<group>"; };
+		A20000028 /* WordleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleView.swift; sourceTree = "<group>"; };
+		A20000029 /* SpaceInvadersGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceInvadersGame.swift; sourceTree = "<group>"; };
+		A2000002A /* SpaceInvadersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceInvadersView.swift; sourceTree = "<group>"; };
+		A2000002B /* AsteroidsGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
+		A2000002C /* AsteroidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsView.swift; sourceTree = "<group>"; };
+		A2000002D /* SudokuGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGame.swift; sourceTree = "<group>"; };
+		A2000002E /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
+		A2000002F /* SolitaireGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolitaireGame.swift; sourceTree = "<group>"; };
+		A20000030 /* SolitaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolitaireView.swift; sourceTree = "<group>"; };
+		A20000031 /* MastermindGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastermindGame.swift; sourceTree = "<group>"; };
+		A20000032 /* MastermindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastermindView.swift; sourceTree = "<group>"; };
+		A20000033 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
+		A20000034 /* BreakoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutView.swift; sourceTree = "<group>"; };
+		A20000035 /* LightsOutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutGame.swift; sourceTree = "<group>"; };
+		A20000036 /* LightsOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
+		A20000037 /* YahtzeeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahtzeeGame.swift; sourceTree = "<group>"; };
+		A20000038 /* YahtzeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahtzeeView.swift; sourceTree = "<group>"; };
+		A20000039 /* MancalaGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaGame.swift; sourceTree = "<group>"; };
+		A2000003A /* MancalaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MancalaView.swift; sourceTree = "<group>"; };
+		A30000001 /* Game Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000002 /* Battleship */,
+				A50000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000002 /* Battleship */ = {
+			isa = PBXGroup;
+			children = (
+				A20000001 /* BattleshipApp.swift */,
+				A20000002 /* ContentView.swift */,
+				A200000B /* GameDefinition.swift */,
+				A500000A /* Views */,
+				A50000006 /* Games */,
+			);
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		A50000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000001 /* Game Room.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50000006 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				A50000007 /* Battleship */,
+				A50000008 /* TicTacToe */,
+				A50000009 /* ConnectFour */,
+				A50000011 /* Checkers */,
+				A50000013 /* Reversi */,
+				A50000015 /* Minesweeper */,
+				A50000017 /* Snake */,
+				A50000019 /* MemoryMatch */,
+				A5000001B /* DotsAndBoxes */,
+				A5000001D /* Hangman */,
+				A5000001F /* Chess */,
+				A50000021 /* Pong */,
+				A50000023 /* TwentyFortyEight */,
+				A50000025 /* Tetris */,
+				A50000027 /* Wordle */,
+				A50000029 /* SpaceInvaders */,
+				A5000002B /* Asteroids */,
+				A5000002D /* Sudoku */,
+				A5000002F /* Solitaire */,
+				A50000031 /* Mastermind */,
+				A50000033 /* Breakout */,
+				A50000035 /* LightsOut */,
+				A50000037 /* Yahtzee */,
+				A50000039 /* Mancala */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		A50000007 /* Battleship */ = {
+			isa = PBXGroup;
+			children = (
+				A20000003 /* Ship.swift */,
+				A20000004 /* Board.swift */,
+				A20000005 /* BattleshipGame.swift */,
+				A200000A /* BattleshipContentView.swift */,
+				A20000006 /* BoardView.swift */,
+				A20000007 /* PlacementView.swift */,
+				A20000008 /* FiringView.swift */,
+				A20000009 /* TransitionView.swift */,
+			);
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		A500000A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2000010 /* GameHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A50000009 /* ConnectFour */ = {
+			isa = PBXGroup;
+			children = (
+				A200000E /* ConnectFourGame.swift */,
+				A200000F /* ConnectFourView.swift */,
+			);
+			path = ConnectFour;
+			sourceTree = "<group>";
+		};
+		A50000008 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				A200000C /* TicTacToeGame.swift */,
+				A200000D /* TicTacToeView.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		A50000011 /* Checkers */ = {
+			isa = PBXGroup;
+			children = (
+				A20000011 /* CheckersGame.swift */,
+				A20000012 /* CheckersView.swift */,
+			);
+			path = Checkers;
+			sourceTree = "<group>";
+		};
+		A50000013 /* Reversi */ = {
+			isa = PBXGroup;
+			children = (
+				A20000013 /* ReversiGame.swift */,
+				A20000014 /* ReversiView.swift */,
+			);
+			path = Reversi;
+			sourceTree = "<group>";
+		};
+		A50000015 /* Minesweeper */ = {
+			isa = PBXGroup;
+			children = (
+				A20000015 /* MinesweeperGame.swift */,
+				A20000016 /* MinesweeperView.swift */,
+			);
+			path = Minesweeper;
+			sourceTree = "<group>";
+		};
+		A50000017 /* Snake */ = {
+			isa = PBXGroup;
+			children = (
+				A20000017 /* SnakeGame.swift */,
+				A20000018 /* SnakeView.swift */,
+			);
+			path = Snake;
+			sourceTree = "<group>";
+		};
+		A50000019 /* MemoryMatch */ = {
+			isa = PBXGroup;
+			children = (
+				A20000019 /* MemoryMatchGame.swift */,
+				A2000001A /* MemoryMatchView.swift */,
+			);
+			path = MemoryMatch;
+			sourceTree = "<group>";
+		};
+		A5000001B /* DotsAndBoxes */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001B /* DotsAndBoxesGame.swift */,
+				A2000001C /* DotsAndBoxesView.swift */,
+			);
+			path = DotsAndBoxes;
+			sourceTree = "<group>";
+		};
+		A5000001D /* Hangman */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001D /* HangmanGame.swift */,
+				A2000001E /* HangmanView.swift */,
+			);
+			path = Hangman;
+			sourceTree = "<group>";
+		};
+		A5000001F /* Chess */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001F /* ChessGame.swift */,
+				A20000020 /* ChessView.swift */,
+			);
+			path = Chess;
+			sourceTree = "<group>";
+		};
+		A50000021 /* Pong */ = {
+			isa = PBXGroup;
+			children = (
+				A20000021 /* PongGame.swift */,
+				A20000022 /* PongView.swift */,
+			);
+			path = Pong;
+			sourceTree = "<group>";
+		};
+		A50000023 /* TwentyFortyEight */ = {
+			isa = PBXGroup;
+			children = (
+				A20000023 /* TwentyFortyEightGame.swift */,
+				A20000024 /* TwentyFortyEightView.swift */,
+			);
+			path = TwentyFortyEight;
+			sourceTree = "<group>";
+		};
+		A50000025 /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				A20000025 /* TetrisGame.swift */,
+				A20000026 /* TetrisView.swift */,
+			);
+			path = Tetris;
+			sourceTree = "<group>";
+		};
+		A50000027 /* Wordle */ = {
+			isa = PBXGroup;
+			children = (
+				A20000027 /* WordleGame.swift */,
+				A20000028 /* WordleView.swift */,
+			);
+			path = Wordle;
+			sourceTree = "<group>";
+		};
+		A50000029 /* SpaceInvaders */ = {
+			isa = PBXGroup;
+			children = (
+				A20000029 /* SpaceInvadersGame.swift */,
+				A2000002A /* SpaceInvadersView.swift */,
+			);
+			path = SpaceInvaders;
+			sourceTree = "<group>";
+		};
+		A5000002B /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002B /* AsteroidsGame.swift */,
+				A2000002C /* AsteroidsView.swift */,
+			);
+			path = Asteroids;
+			sourceTree = "<group>";
+		};
+		A5000002D /* Sudoku */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002D /* SudokuGame.swift */,
+				A2000002E /* SudokuView.swift */,
+			);
+			path = Sudoku;
+			sourceTree = "<group>";
+		};
+		A5000002F /* Solitaire */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002F /* SolitaireGame.swift */,
+				A20000030 /* SolitaireView.swift */,
+			);
+			path = Solitaire;
+			sourceTree = "<group>";
+		};
+		A50000031 /* Mastermind */ = {
+			isa = PBXGroup;
+			children = (
+				A20000031 /* MastermindGame.swift */,
+				A20000032 /* MastermindView.swift */,
+			);
+			path = Mastermind;
+			sourceTree = "<group>";
+		};
+		A50000033 /* Breakout */ = {
+			isa = PBXGroup;
+			children = (
+				A20000033 /* BreakoutGame.swift */,
+				A20000034 /* BreakoutView.swift */,
+			);
+			path = Breakout;
+			sourceTree = "<group>";
+		};
+		A50000035 /* LightsOut */ = {
+			isa = PBXGroup;
+			children = (
+				A20000035 /* LightsOutGame.swift */,
+				A20000036 /* LightsOutView.swift */,
+			);
+			path = LightsOut;
+			sourceTree = "<group>";
+		};
+		A50000037 /* Yahtzee */ = {
+			isa = PBXGroup;
+			children = (
+				A20000037 /* YahtzeeGame.swift */,
+				A20000038 /* YahtzeeView.swift */,
+			);
+			path = Yahtzee;
+			sourceTree = "<group>";
+		};
+		A50000039 /* Mancala */ = {
+			isa = PBXGroup;
+			children = (
+				A20000039 /* MancalaGame.swift */,
+				A2000003A /* MancalaView.swift */,
+			);
+			path = Mancala;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000001 /* Battleship */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000003 /* Build configuration list for PBXNativeTarget "Battleship" */;
+			buildPhases = (
+				A70000001 /* Sources */,
+				A40000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Battleship;
+			productName = Battleship;
+			productReference = A30000001 /* Game Room.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+			};
+			buildConfigurationList = A80000001 /* Build configuration list for PBXProject "Battleship" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50000001;
+			productRefGroup = A50000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000001 /* Battleship */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000001 /* BattleshipApp.swift in Sources */,
+				A10000002 /* ContentView.swift in Sources */,
+				A1000000B /* GameDefinition.swift in Sources */,
+				A10000003 /* Ship.swift in Sources */,
+				A10000004 /* Board.swift in Sources */,
+				A10000005 /* BattleshipGame.swift in Sources */,
+				A1000000A /* BattleshipContentView.swift in Sources */,
+				A10000006 /* BoardView.swift in Sources */,
+				A10000007 /* PlacementView.swift in Sources */,
+				A10000008 /* FiringView.swift in Sources */,
+				A10000009 /* TransitionView.swift in Sources */,
+				A1000000C /* TicTacToeGame.swift in Sources */,
+				A1000000D /* TicTacToeView.swift in Sources */,
+				A1000000E /* ConnectFourGame.swift in Sources */,
+				A1000000F /* ConnectFourView.swift in Sources */,
+				A10000011 /* CheckersGame.swift in Sources */,
+				A10000012 /* CheckersView.swift in Sources */,
+				A10000013 /* ReversiGame.swift in Sources */,
+				A10000014 /* ReversiView.swift in Sources */,
+				A10000015 /* MinesweeperGame.swift in Sources */,
+				A10000016 /* MinesweeperView.swift in Sources */,
+				A10000017 /* SnakeGame.swift in Sources */,
+				A10000018 /* SnakeView.swift in Sources */,
+				A10000019 /* MemoryMatchGame.swift in Sources */,
+				A1000001A /* MemoryMatchView.swift in Sources */,
+				A1000001B /* DotsAndBoxesGame.swift in Sources */,
+				A1000001C /* DotsAndBoxesView.swift in Sources */,
+				A1000001D /* HangmanGame.swift in Sources */,
+				A1000001E /* HangmanView.swift in Sources */,
+				A1000001F /* ChessGame.swift in Sources */,
+				A10000020 /* ChessView.swift in Sources */,
+				A10000021 /* PongGame.swift in Sources */,
+				A10000022 /* PongView.swift in Sources */,
+				A10000023 /* TwentyFortyEightGame.swift in Sources */,
+				A10000024 /* TwentyFortyEightView.swift in Sources */,
+				A10000025 /* TetrisGame.swift in Sources */,
+				A10000026 /* TetrisView.swift in Sources */,
+				A10000027 /* WordleGame.swift in Sources */,
+				A10000028 /* WordleView.swift in Sources */,
+				A10000029 /* SpaceInvadersGame.swift in Sources */,
+				A1000002A /* SpaceInvadersView.swift in Sources */,
+				A1000002B /* AsteroidsGame.swift in Sources */,
+				A1000002C /* AsteroidsView.swift in Sources */,
+				A1000002D /* SudokuGame.swift in Sources */,
+				A1000002E /* SudokuView.swift in Sources */,
+				A1000002F /* SolitaireGame.swift in Sources */,
+				A10000030 /* SolitaireView.swift in Sources */,
+				A10000031 /* MastermindGame.swift in Sources */,
+				A10000032 /* MastermindView.swift in Sources */,
+				A10000033 /* BreakoutGame.swift in Sources */,
+				A10000034 /* BreakoutView.swift in Sources */,
+				A10000035 /* LightsOutGame.swift in Sources */,
+				A10000036 /* LightsOutView.swift in Sources */,
+				A10000037 /* YahtzeeGame.swift in Sources */,
+				A10000038 /* YahtzeeView.swift in Sources */,
+				A10000039 /* MancalaGame.swift in Sources */,
+				A1000003A /* MancalaView.swift in Sources */,
+				A10000010 /* GameHeader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A80000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1";
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A80000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldenhammersmith.GameRoomiOS;
+				PRODUCT_NAME = "Game Room";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A80000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldenhammersmith.GameRoomiOS;
+				PRODUCT_NAME = "Game Room";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000001 /* Build configuration list for PBXProject "Battleship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000011 /* Debug */,
+				A80000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000003 /* Build configuration list for PBXNativeTarget "Battleship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000021 /* Debug */,
+				A80000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A90000001 /* Project object */;
+}
